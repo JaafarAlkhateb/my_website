@@ -1,10 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>موقعي الأول</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدمات أحمد المتنوعة</title>
+  <style>
+    body { font-family: Tahoma, sans-serif; background: #f0f0f0; margin: 0; padding: 0; }
+    header { background: #0c4a6e; color: white; padding: 40px 20px; text-align: center; }
+    h1 { margin: 0; font-size: 28px; }
+    p.tagline { margin-top: 10px; font-size: 16px; }
+    .section { background: white; margin: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .accordion { cursor: pointer; padding: 20px; font-size: 18px; border: none; text-align: right; outline: none; background: #e5f3ff; width: 100%; transition: background 0.3s ease; }
+    .accordion:hover { background: #d2eaff; }
+    .panel { padding: 0 20px 20px; display: none; background: #fff; }
+    ul { line-height: 2; margin: 10px 0 0 0; padding: 0; list-style: none; }
+    .button { background: #0c4a6e; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin: 20px; }
+    footer { text-align: center; padding: 20px; background: #ddd; font-size: 14px; }
+    .image-gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .image-gallery img { width: 100px; height: auto; border-radius: 5px; object-fit: cover; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  </style>
 </head>
 <body>
-  <h1>مرحبًا بكم في مطبوعات الرياض</h1>
+
+<header>
+  <h1>أحمد – مصمم ومهندس مدني قيد الدراسة</h1>
+  <p class="tagline">خدمات هندسية، تصميمية، تقنية وأكاديمية من شخص واحد</p>
+</header>
+
+<div class="section">
+  <button class="accordion">📐 الخدمات الهندسية</button>
+  <div class="panel">
+    <ul>
+      <li>رسم أوتوكاد للمخططات</li>
+      <li>نمذجة مشاريع على الريفيت</li>
+      <li>تحويل PDF إلى DWG</li>
+      <li>جداول كميات وتنسيق ملفات</li>
+    </ul>
+    <div class="image-gallery">
+      <img src="img/autocad-logo.png" alt="أوتوكاد">
+      <img src="img/plan1.jpg" alt="مخطط هندسي">
+      <img src="img/plan2.jpg" alt="رسم معماري">
+    </div>
+  </div>
+
+  <button class="accordion">🎨 التصميم والطباعة</button>
+  <div class="panel">
+    <ul>
+      <li>تصميم كروت، بروشورات وشعارات</li>
+      <li>مطويات وعروض إعلانية</li>
+      <li>طباعة أكاديمية وPDF احترافي</li>
+    </ul>
+    <div class="image-gallery">
+      <img src="img/card.jpg" alt="كرت شخصي">
+      <img src="img/box.jpg" alt="علبة فاخرة">
+      <img src="img/bags.jpg" alt="أكياس وبكجات">
+    </div>
+  </div>
+
+  <button class="accordion">📊 خدمات برامج الأوفيس</button>
+  <div class="panel">
+    <ul>
+      <li>تنسيق تقارير وملفات Word</li>
+      <li>جداول Excel متقدمة</li>
+      <li>عروض PowerPoint للطلاب والشركات</li>
+    </ul>
+  </div>
+
+  <button class="accordion">📚 خدمات طلابية</button>
+  <div class="panel">
+    <ul>
+      <li>تلخيصات وإعداد حلقات بحث</li>
+      <li>تصميم عروض تخرج</li>
+      <li>تنسيق ملفات، مراجع، تجميع محتوى</li>
+    </ul>
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <a href="https://wa.me/966500000000" class="button">تواصل واتساب</a>
+</div>
+
+<footer>
+  © 2025 جميع الحقوق محفوظة لأحمد
+</footer>
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(btn => {
+    btn.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  });
+</script>
+
 </body>
 </html>
